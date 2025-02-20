@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Warning image
         const image = document.createElement("img");
-        image.src = "images/stop.png"; // Replace with your image
+        image.src = "https://i.postimg.cc/1tcqQJtb/stop.png"; // Replace with your image
         image.alt = "Warning Image";
         image.style = "margin-bottom: 15px; width: 100px;";
 

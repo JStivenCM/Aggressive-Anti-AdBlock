@@ -1,5 +1,5 @@
 # 🚫 Agressive-Anti-AdBlock  
-![Project cover](https://github.com/JStivenCM/Aggressive-Anti-AdBlock/blob/main/demo/images/cover.png)
+![Project cover](/cover.png)
 
 Is an advanced JavaScript tool that robustly detects and counteracts ad blockers. It employs a persistent, self-restoring modal technique—ensuring that if a blocker hides or removes the warning, it will reappear. With a lightweight design and flexible customization, this solution helps maintain your site's revenue while ensuring that only visitors who truly appreciate your content (and are willing to disable their ad blocker to support you) remain. Perfect for creators who want to keep delivering quality content without compromise.
 
@@ -36,14 +36,14 @@ It is recommended to rename the file to something less obvious or integrate it d
 # ⚙️ Configuration
 The script runs automatically when the page loads. If you want to customize it, edit ```Agressive-Anti-AdBlock.js``` and modify the following elements:
 
-- ```image.src = "../Your-Icon.png";``` → Change the warning image.
+- ```image.src = "https://i.postimg.cc/1tcqQJtb/stop.png";``` → Change the warning image.
 - ```message.innerText = "Please disable your ad blocker and reload the page.";``` → Modify the warning message.
 - ```reloadButton.innerHTML = 'Reload';``` → Customize the button text.
 
 ## 🔍 Live Demo  
 Want to see Agressive-Anti-AdBlock in action? Check out the live demo:  
 
-➡️ **[DEMO](https://jstivencm.github.io/Aggressive-Anti-AdBlock/demo/index.html)**  
+➡️ **[DEMO](https://demo-aggressive-anti-adblock.blogspot.com)**  
 
 _Remember to have ad blockers active when visiting this demo, so you can see it working._
 

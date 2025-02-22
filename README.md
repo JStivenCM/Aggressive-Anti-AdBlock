@@ -43,7 +43,7 @@ The script runs automatically when the page loads. If you want to customize it, 
 ## 🔍 Live Demo  
 Want to see Agressive-Anti-AdBlock in action? Check out the live demo:  
 
-➡️ **[DEMO](https://demo-aggressive-anti-adblock.blogspot.com)**  
+➡️ **[DEMO](https://aggressive-anti-adblock.blogspot.com)**  
 
 _Remember to have ad blockers active when visiting this demo, so you can see it working._
 

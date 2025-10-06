@@ -1,4 +1,4 @@
-# 🚫 Agressive-Anti-AdBlock  
+# 🚫 Agressive Anti-AdBlock  
 ![Project cover](/cover.png)
 
 Is an advanced JavaScript tool that robustly detects and counteracts ad blockers. It employs a persistent, self-restoring modal technique—ensuring that if a blocker hides or removes the warning, it will reappear. With a lightweight design and flexible customization, this solution helps maintain your site's revenue while ensuring that only visitors who truly appreciate your content (and are willing to disable their ad blocker to support you) remain. Perfect for creators who want to keep delivering quality content without compromise.

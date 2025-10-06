@@ -41,7 +41,7 @@ The script runs automatically when the page loads. If you want to customize it, 
 - ```reloadButton.innerHTML = 'Reload';``` → Customize the button text.
 
 ## 🔍 Live Demo  
-Want to see Agressive-Anti-AdBlock in action? Check out the live demo:  
+Want to see Agressive Anti-AdBlock in action? Check out the live demo:  
 
 ➡️ **[DEMO](https://aggressive-anti-adblock.blogspot.com)**  
 

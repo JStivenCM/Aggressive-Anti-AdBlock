@@ -11,6 +11,24 @@
 - Customizable warning modal: image, message, and button easily editable.
 - Easy integration: just add the script, no dependencies.
 
+---
+
+## 🛡️ Blocked AdBlocker Extensions
+The following popular ad blocker extensions will no longer work on your site after these updates:
+
+<p align="center">
+<!-- Place your 7 adblocker extension icons below -->
+<img src="/icons/AdBlock.png" alt="AdBlock" width="140"/>
+<img src="/icons/AdBlockUltimate.png" alt="AdBlock Ultimate" width="140"/>
+<img src="/icons/AdGuard.png" alt="AdGuard" width="140"/>
+<img src="/icons/AdBloq.png" alt="AdBloq" width="140"/>
+<img src="/icons/MalwarebytesBrowserGuard.png" alt="Malwarebytes Browser Guard" width="140"/>
+<img src="/icons/AllBlock.png" alt="AllBlock" width="140"/>
+<img src="/icons/uBlockOrigin.png" alt="uBlock Origin" width="140"/>
+</p>
+
+---
+
 ## 🌟 Features
 - **Advanced detection** of AdBlockers using multiple bait techniques.
 - **Persistent modal** that reappears if hidden or altered by external scripts or ad blockers.
@@ -58,24 +76,6 @@ Want to see Aggressive Anti-AdBlock in action? Check out the live demo:
 ➡️ **[DEMO](https://aggressive-anti-adblock.blogspot.com)**
 
 _Remember to have ad blockers active when visiting this demo, so you can see it working._
-
----
-
-## 🛡️ Blocked AdBlocker Extensions
-The following popular ad blocker extensions will no longer work on your site after these updates:
-
-<p align="center">
-<!-- Place your 7 adblocker extension icons below -->
-<img src="/icons/adblock.png" alt="AdBlock" width="64"/>
-<img src="/icons/adblockplus.png" alt="Adblock Plus" width="64"/>
-<img src="/icons/ublockorigin.png" alt="uBlock Origin" width="64"/>
-<img src="/icons/adguard.png" alt="AdGuard" width="64"/>
-<img src="/icons/ghostery.png" alt="Ghostery" width="64"/>
-<img src="/icons/privacybadger.png" alt="Privacy Badger" width="64"/>
-<img src="/icons/braveshields.png" alt="Brave Shields" width="64"/>
-</p>
-
----
 
 # 📜 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute it without restrictions.

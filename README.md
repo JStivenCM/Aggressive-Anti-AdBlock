@@ -1,20 +1,20 @@
 # 🚫 Aggressive Anti-AdBlock
 ![Project cover](/cover.png)
 
-**Aggressive Anti-AdBlock** is an advanced JavaScript tool that robustly detects and counteracts ad blockers. It now features even more resilient detection and a persistent, self-restoring modal. If a blocker hides or removes the warning, it will reappear automatically. The script uses multiple bait techniques, AdSense-specific checks, and iframe detection to ensure ad blockers are reliably detected and users are notified until they disable them. Lightweight, flexible, and easy to customize, this solution helps maintain your site's revenue and ensures only truly supportive visitors remain. Perfect for creators who want to keep delivering quality content without compromise.
+**Aggressive Anti-AdBlock** is an advanced JavaScript tool that robustly detects and counteracts ad blockers. It now features **aggressive persistence mechanisms**, **smart resource optimization**, and **multi-vector detection**. If a blocker hides or removes the warning, it re-appears instantly, immune to simple CSS hiding tricks or DOM deletion. The script uses multiple bait techniques, AdSense-specific scanning, and iframe detection to ensure ad blockers are reliably detected. Lightweight, flexible, and CPU-friendly thanks to its new cooling system.
 
-
-## 🆕 What's New?
-- Multi-layered adblock detection: generic bait, AdSense bait, and forced-style iframe checks.
-- Persistent, self-restoring modal: if hidden or altered, it is recreated automatically.
-- MutationObserver and polling: ensures real-time detection and resilience against script tampering.
-- Customizable warning modal: image, message, and button easily editable.
-- Easy integration: just add the script, no dependencies.
+## 🆕 What's New? (Version 2.0 Optimized)
+- **Aggressive Persistence**: The modal now actively protects itself by **rotating its HTML ID** every second and enforcing `!important` styles. This prevents users from hiding it using static CSS rules or Developer Tools.
+- **Smart Cooling System**: To save your users' CPU, the detection loop switches from "Aggressive" to "Passive" mode after 30 seconds. It re-engages instantly if the user switches tabs or reloads.
+- **Cache-Busting Bait Refresh**: The script actively moves bait elements in the DOM to force the browser to re-evaluate styles, defeating blockers that rely on cached rules.
+- **Enhanced AdSense Shield**: Now scans **all** AdSense units on the page for class manipulation or hidden attributes, ensuring legitimate ads aren't silently blocked.
+- **Anti-Tamper Logic**: Detects and fixes advanced evasion techniques like negative `z-index`, `clip-path` masking, and `opacity` hacks.
 
 ---
 
 ## 🛡️ Blocked AdBlocker Extensions
-The following popular ad blocker extensions will no longer work on your site after these updates:
+The following popular ad blocker extensions will no longer work on your site after these updates:  
+The script works with most extensions; however, some employed advanced techniques to evade detection. With the latest changes, these and many others are no longer effective.
 
 <p align="center">
 <!-- Place your 7 adblocker extension icons below -->
@@ -30,10 +30,11 @@ The following popular ad blocker extensions will no longer work on your site aft
 ---
 
 ## 🌟 Features
-- **Advanced detection** of AdBlockers using multiple bait techniques.
-- **Persistent modal** that reappears if hidden or altered by external scripts or ad blockers.
-- **AdSense-specific detection** for even the most sophisticated blockers.
+- **Advanced detection** of AdBlockers using multiple bait techniques (Generic & AdSense).
+- **Self-Healing Modal** that regenerates if deleted from the DOM.
+- **CSS-Proof Design**: Rotates IDs and checks for `visibility`, `display`, `opacity`, `z-index`, and `clip-path`.
 - **Iframe forced-style detection** to catch advanced hiding techniques.
+- **Performance Optimized**: Uses `requestAnimationFrame` principles and idle checks (Cool-down mode).
 - **Easy to integrate** into any website.
 
 
@@ -41,13 +42,12 @@ The following popular ad blocker extensions will no longer work on your site aft
 ### 1️⃣ Direct Download & Integration
 Download `Aggressive-Anti-AdBlock.js` or `Aggressive-Anti-AdBlock.min.js` and add it to your website:
 ```html
-<script src="Aggressive-Anti-AdBlock.js"></script>
+<script src="assets/js/Aggressive-Anti-AdBlock.js"></script>
 ```
-**Or**
+or
 ```html
-<script src="Aggressive-Anti-AdBlock.min.js"></script>
+<script src="assets/js/Aggressive-Anti-AdBlock.min.js"></script>
 ```
-
 ### 2️⃣ Using CDN (Quick Option)
 Add this script inside the `<head>` or before `</body>`:
 
@@ -59,15 +59,16 @@ Add this script inside the `<head>` or before `</body>`:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/JStivenCM/Aggressive-Anti-AdBlock/Aggressive-Anti-AdBlock.min.js"></script>
 ```
-⚠️ Warning: Using a direct file name like `Aggressive-Anti-AdBlock.js` or a CDN may lead to ad blockers detecting and blocking it. It is recommended to rename the file to something less obvious or integrate it directly into your website.
+⚠️ Warning: Using a direct file name like `Aggressive-Anti-AdBlock.js` or a CDN may lead to ad blockers detecting and blocking it via URL filtering. It is strongly recommended to copy the code from `Aggressive-Anti-AdBlock.js` and integrate it directly into your main JS bundle or rename the file.
 
 
 ## ⚙️ Configuration
-The script runs automatically when the page loads. To customize the modal, edit `Aggressive-Anti-AdBlock.js` and modify:
+The script runs automatically when the page loads. To customize the modal, edit the `config` object in the script:
 
-- `image.src = "https://i.postimg.cc/1tcqQJtb/stop.png";` → Change the warning image.
-- `message.innerText = "Please disable your ad blocker and reload the page.";` → Modify the warning message.
-- `reloadButton.innerHTML = 'Reload';` → Customize the button text.
+- `checkInterval`: Time in ms between checks (default: `2000`).
+- `image.src`: Change the warning image URL.
+- `message.innerText`: Modify the warning text.
+- `reloadButton.innerHTML`: Customize the button text/icon.
 
 
 ## 🔍 Live Demo

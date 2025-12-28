@@ -68,7 +68,7 @@ Add this script inside the `<head>` or before `</body>`:
 The script runs automatically when the page loads. To customize the modal, edit the `config` object in the script:
 
 - `checkInterval`: Time in ms between checks (default: `2000`).
-- `ids.watchedAdContainers`: Array of IDs of your legitimate ad containers to monitor (e.g., `['ad-sidebar', 'banner-top']`). Essential for catching native blockers.
+- `ids.watchedAdContainers`: Array of IDs of your legitimate ad containers to monitor (e.g., `['ad-sidebar', 'banner-top']`). Essential for catching native blockers. **⚠️ Important:** Ensure these elements are present and visible on ALL devices (Desktop & Mobile). If an element is hidden by your own responsive CSS (e.g., `display: none` on mobile), it will trigger a false positive.
 - `image.src`: Change the warning image URL.
 - `message.innerText`: Modify the warning text.
 - `reloadButton.innerHTML`: Customize the button text/icon.

@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
             ids: {
                 baitGeneric: 'ad-detection-bait', // Generic bait ID
                 baitAdsense: 'ad-detection-bait-ins', // Unique ID for our specific AdSense bait
-                modalPrefix: 'anti-adblock-' // Prefix for modal IDs
+                modalPrefix: 'anti-adblock-', // Prefix for modal IDs
+                watchedAdContainers: [] // OPTIONAL: User-defined IDs of legitimate ad containers to monitor. E.g. ['ad-header', 'ad-sidebar', 'ad-bottom']
             },
             classes: {
                 // A mix of common ad-related classes to trigger generic blockers
@@ -221,6 +222,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (hasSuspiciousClass || ad.hasAttribute("title")) {
                     detected = true;
                     break;
+                }
+            }
+
+            // Check Method C: User-defined Ad Containers
+            // Checks if specific containers defined by the user are hidden or removed
+            if (this.config.ids.watchedAdContainers && Array.isArray(this.config.ids.watchedAdContainers)) {
+                for (const containerId of this.config.ids.watchedAdContainers) {
+                    const el = document.getElementById(containerId);
+                    // Trigger detection if element is missing (removed) or hidden
+                    if (!el || this.isBlocked(el)) {
+                        detected = true;
+                        break;
+                    }
                 }
             }
 

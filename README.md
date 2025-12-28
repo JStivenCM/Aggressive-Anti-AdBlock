@@ -9,6 +9,7 @@
 - **Cache-Busting Bait Refresh**: The script actively moves bait elements in the DOM to force the browser to re-evaluate styles, defeating blockers that rely on cached rules.
 - **Enhanced AdSense Shield**: Now scans **all** AdSense units on the page for class manipulation or hidden attributes, ensuring legitimate ads aren't silently blocked.
 - **Anti-Tamper Logic**: Detects and fixes advanced evasion techniques like negative `z-index`, `clip-path` masking, and `opacity` hacks.
+- **Custom Container Monitoring**: New ability to monitor specific IDs of your own ad containers. This acts as a countermeasure against **native browser blockers** (like Brave, Edge, Chrome, Opera, Vivaldi, Samsung Internet, Adblock Browser) that remove elements without using traditional extensions.
 
 ---
 
@@ -33,6 +34,7 @@ The script works with most extensions; however, some employed advanced technique
 - **Advanced detection** of AdBlockers using multiple bait techniques (Generic & AdSense).
 - **Self-Healing Modal** that regenerates if deleted from the DOM.
 - **CSS-Proof Design**: Rotates IDs and checks for `visibility`, `display`, `opacity`, `z-index`, and `clip-path`.
+- **Native Blocker Countermeasure**: Capable of detecting blocks from Brave, Edge, Chrome, Opera, Vivaldi, Samsung Internet, Adblock Browser, and other distinct browsers by monitoring your actual ad containers.
 - **Iframe forced-style detection** to catch advanced hiding techniques.
 - **Performance Optimized**: Uses `requestAnimationFrame` principles and idle checks (Cool-down mode).
 - **Easy to integrate** into any website.
@@ -66,6 +68,7 @@ Add this script inside the `<head>` or before `</body>`:
 The script runs automatically when the page loads. To customize the modal, edit the `config` object in the script:
 
 - `checkInterval`: Time in ms between checks (default: `2000`).
+- `ids.watchedAdContainers`: Array of IDs of your legitimate ad containers to monitor (e.g., `['ad-sidebar', 'banner-top']`). Essential for catching native blockers.
 - `image.src`: Change the warning image URL.
 - `message.innerText`: Modify the warning text.
 - `reloadButton.innerHTML`: Customize the button text/icon.
